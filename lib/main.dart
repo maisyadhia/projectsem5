@@ -9,8 +9,13 @@ class Sib3a extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutternya Maisya'),
+          backgroundColor: Colors.purple,
+        ),
+      ),
     );
   }
 }
