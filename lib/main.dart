@@ -15,7 +15,10 @@ class Sib3a extends StatelessWidget {
           title: Row(
             children: [
               const Icon(Icons.account_circle, size: 48, color: Colors.white),
-              const Text('Flutternya Maisya'),
+              const Text(
+                'Flutternya Maisya',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
               const FlutterLogo(size: 48),
               Image.asset('assets/images/poltek.jpeg', width: 48, height: 48),
             ],
@@ -23,7 +26,17 @@ class Sib3a extends StatelessWidget {
           backgroundColor: Colors.purple,
         ),
         drawer: const Drawer(),
-        body: const Center(child: Placeholder()),
+        body: const Center(
+          child: Text(
+            'Halo, Flutter!',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.purple,
+              fontStyle: FontStyle.italic,
+              letterSpacing: 1.2,
+            ),
+          ),
+        ),
       ),
     );
   }
