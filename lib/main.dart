@@ -11,36 +11,34 @@ class Sib3a extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutternya Maisya'),
-          backgroundColor: Colors.purple,
-        ),
+        appBar: AppBar(title: const Text('Flutternya Maisya')),
         drawer: const Drawer(),
-        body: Container(
-          margin: const EdgeInsets.all(10),
-          padding: const EdgeInsets.all(10),
-          height: 250,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Colors.purple, Colors.deepPurple],
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('You have ...'),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star, color: Colors.amber),
+                Icon(Icons.star, color: Colors.amber),
+                Icon(Icons.star_half, color: Colors.amber),
+              ],
             ),
-            border: Border.all(color: Colors.black),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('You have ...'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.star, color: Colors.amber),
-                  Icon(Icons.star, color: Colors.amber),
-                  Icon(Icons.star_half, color: Colors.amber),
-                ],
-              ),
-            ],
-          ),
+            ElevatedButton(onPressed: () {}, child: const Text('Klik Here')),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Text Button'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: const Text('Outlined Button'),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.favorite, color: Colors.red),
+            ),
+          ],
         ),
       ),
     );
