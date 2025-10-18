@@ -11,35 +11,19 @@ class Sib3a extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('Flutternya Maisya')),
-        drawer: const Drawer(),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('You have ...'),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.star, color: Colors.amber),
-                Icon(Icons.star, color: Colors.amber),
-                Icon(Icons.star_half, color: Colors.amber),
-              ],
-            ),
-            ElevatedButton(onPressed: () {}, child: const Text('Klik Here')),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Text Button'),
-            ),
-            OutlinedButton(
-              onPressed: () {},
-              child: const Text('Outlined Button'),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite, color: Colors.red),
-            ),
-          ],
+        appBar: AppBar(
+          title: Row(
+            children: [
+              const Icon(Icons.account_circle, size: 48, color: Colors.white),
+              const Text('Flutternya Maisya'),
+              const FlutterLogo(size: 48),
+              Image.asset('assets/images/poltek.jpeg', width: 48, height: 48),
+            ],
+          ),
+          backgroundColor: Colors.purple,
         ),
+        drawer: const Drawer(),
+        body: const Center(child: Placeholder()),
       ),
     );
   }
